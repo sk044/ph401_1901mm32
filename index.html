@@ -1,0 +1,79 @@
+<!-- 
+    Shubham Kumar (1901MM32) 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.plot.ly/plotly-2.6.4.min.js"></script>
+    <script src="script.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+        </style>
+    <title>PH401 Project - 1901MM32</title>
+</head>
+<body>
+
+<div class="title">
+    <h1 style = " text-align:center ">PH401 Project- 1901MM32</h1>
+    <h2 style = " text-align:center ">Percentage of atoms in Bulk/Surface<span></h2>
+</div>
+
+<div class="container">
+    <!-- <form> -->
+        <div class="row">
+            <div class="row">
+                <h4>Shape</h4>
+                <div class="input-group">
+                    <input required id="shape1" type="radio" name="shape" value="Cuboctahedral"/>
+                        <label for="shape1"><span><i class="fa fa-cc-visa"></i>Cuboctahedral</span></label>
+                    <input required id="shape2" type="radio" name="shape" value="Spherical" />
+                        <label for="shape2"> <span><i class="fa fa-cc-paypal"></i>Spherical</span></label>
+                </div>
+            </div>
+            <div class="row">
+                <h4>Application</h4>
+                <div class="input-group">
+                    <input required id="application1" type="radio" name="application" id="optical" value="Optical" onclick="autoSize()" />
+                        <label for="application1"><span><i class="fa fa-cc-visa"></i>Optical</span></label>
+                    <input required id="application2" type="radio" name="application" id="electrical" value="Electrical" onclick="autoSize()" />
+                        <label for="application2"> <span><i class="fa fa-cc-paypal"></i>Electrical</span></label>
+                    <input required id="application3" type="radio" name="application" id="magnetic" value="Magnetic" onclick="autoSize()" />
+                        <label for="application3"> <span><i class="fa fa-cc-paypal"></i>Magnetic</span></label>
+                    <input required id="application4" type="radio" name="application" id="strength" value="Strength" onclick="autoSize()" />
+                        <label for="application4"> <span><i class="fa fa-cc-paypal"></i>Strength</span></label>
+                    <input required id="application5" type="radio" name="application" id="none" value="None" onclick="autoSize()" />
+                        <label for="application5"> <span><i class="fa fa-cc-paypal" onclick="autoSize()"></i>None</span></label>
+                </div>
+            </div>
+            <h4>Size Constraints</h4>
+            <div class="size">
+                <div class="input-group input-group-icon"><input required type="number" placeholder="Min Size" id="min_particle_size" min="1" />
+                </div>
+                <div class="input-group input-group-icon"><input required type="number" placeholder="Max Size" id="max_particle_size" min="1" />
+                </div>
+            </div>
+            
+            <div class="row">
+                <button type="text" class="submit" onclick="draw()">RUN</button>
+            </div>
+        </div>
+        
+        
+
+        <div class="graph">
+            <h5 id="results"></h5>
+            <div class="container1" id="finalPlot">
+                <!-- Graph will be drawn here -->
+            </div>
+        </div>
+    <!-- </form>  -->
+</div>
+
+
+</body>
+</html>
