@@ -1,6 +1,5 @@
 # PH401 : Introduction to Nanomaterials
 
-## Group Members
 ------------------------------------
 | Name                  | Roll No. |
 |-----------------------|----------|
